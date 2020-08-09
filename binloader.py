@@ -37,7 +37,7 @@ def read_bin(filename, shape=None, **kwargs):
     print(filename)
     kwargs['dtype'] = kwargs.get('dtype', np.float32)
     arr = np.fromfile(filename, **kwargs)
-    print(arr)
+    print(arr[0])
     if shape is not None:
         try:
             arr = arr.reshape(shape)
@@ -56,7 +56,7 @@ def main():
 
 #    path = "/Volumes/ssd/diamond.bin"
 #    print(path)
-    path = "/Volumes/ssd/all/T_316000_233500_NW.bin"
+    path = "/Volumes/ssd/NYU/all/T_316000_233500_NW.bin"
     data = read_bin(path)
     print(data)
     
